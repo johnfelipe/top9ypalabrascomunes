@@ -1,0 +1,24 @@
+{% load speech_i18n %}
+{% load speech_extension %}
+{% load thumbnail %}
+{% load staticfiles %}
+
+<br><br>
+<h3>{% trans 'Top 9 Oradores' %}</h3>
+{% get_top_speakers as top_speakers %}
+
+<div class="row top-speakers">
+
+
+    {% for speaker in top_speakers %}
+    <a href="{{ speaker.get_absolute_url }}">
+        <div class="speaker">
+            <img src="{% if speaker.image_cache %}{{ speaker.image_cache|thumbnail_url:'speaker-thumb' }}{% elif speaker.image %}{{ speaker.image }}{% else %}{% static "speeches/i/a.png" %}{% endif %}"
+                         style="border-color: #{{ speaker.colour }}; background-color: #{{ speaker.colour }};" alt="" class="speaker-card__portrait speaker-portrait round-image speaker-portrait--small">
+            {{ speaker}}<br>
+            <small>{{ speaker.count }} {% if speaker.count == 1 %} speech {% else %} speeches {% endif %}</small>
+        </div>
+    </a>
+    {% endfor %}
+
+</div>
