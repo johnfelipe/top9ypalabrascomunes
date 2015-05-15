@@ -48,6 +48,9 @@ def get_common_words(count=20):
 		'solo', 'dentro', 'podemos', 'algunos', 'estar', 'ahora', 'tema', 'mismo', 'sólo', 'temas',
 		'tiene', 'muy', 'está', 'cuando', 'nosotros', 'doctor', 'hacer', 'tienen', 'sobre', 'vamos',
 		'tres', 'así', 'ver', 'bien', 'cómo', 'entre', 'mucho', 'otros', 'todas', '000',
+		'voy', 'sido', 'era', 'vez', 'unas', 'cosas', 'general', 'tanto', 'frente', 'muchas',
+		'tener', 'tipo', 'mil', 'estoy', 'gran', 'san', 'tan', 'tengo', 'cual', 'dice',
+		'mayor', 'allá', 'solamente', 'bueno', 'primeramente', 'pues', 'consiguiente', 'debido', 'cuenta', 'menos',
 	])
 
     speeches = Speech.objects.all()
