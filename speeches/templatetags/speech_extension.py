@@ -53,7 +53,9 @@ def get_common_words(count=20):
 		'mayor', 'allá', 'solamente', 'bueno', 'primeramente', 'pues', 'consiguiente', 'debido', 'cuenta', 'menos',
 	])
 
-    speeches = Speech.objects.all()
+    #speeches = Speech.objects.all()
+	#speeches = Speech.objects.order_by('-id')[0]
+	speeches = Speech.objects.order_by('-id')[0:10]
 
     word_counts = defaultdict(int)
     total_count = 0
